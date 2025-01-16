@@ -22,7 +22,7 @@ os.makedirs("static", exist_ok=True)
 global enable, input_token, input_chatid
 config_file = 'static/config.json'
 def get_input_prompt():
-    current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S.') + str(datetime.now().microsecond // 1000).zfill(3)
+    current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S.') + str(datetime.now().microsecond // 3000).zfill(3)
     frame = inspect.stack()[1]
     module_name = inspect.getmodule(frame[0]).__name__
     module_info = f'{module_name}:<module>'
